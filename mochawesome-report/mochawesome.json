@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 3,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-03-30T22:08:31.489Z",
+    "end": "2023-03-30T22:09:19.369Z",
+    "duration": 47880,
+    "testsRegistered": 5,
+    "passPercent": 60,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cafcacfa-adf8-4fe3-a42d-6922b136fe81",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TradeMe\\TradeMeTest.spec.js",
+      "file": "cypress\\e2e\\TradeMe\\TradeMeTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "251ea8dc-9a40-4982-950a-9f307982f4f1",
+          "title": "As a user, I can see all car brands on the Make dropdown",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "I can verify that the number of car brands",
+              "fullTitle": "As a user, I can see all car brands on the Make dropdown I can verify that the number of car brands",
+              "timedOut": null,
+              "duration": 6997,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('select[name=\"selectedMake\"]').find(\"option\").then(($value) => {\n  length = $value.length;\n  cy.log(\"The number obtained is \" + length + \" but we got to take off first and last result because they are not car brands. So, the number of car brands obtained is 77\");\n});",
+              "err": {},
+              "uuid": "d1487b49-e59a-4728-b698-7678ac0ce662",
+              "parentUUID": "251ea8dc-9a40-4982-950a-9f307982f4f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I select the brand Audi and the showing results is 2,451",
+              "fullTitle": "As a user, I can see all car brands on the Make dropdown I select the brand Audi and the showing results is 2,451",
+              "timedOut": null,
+              "duration": 11097,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('select[name=\"selectedMake\"]').select(\"Audi\").should(\"have.value\", \"Audi\");\ncy.get(\".tm-motors-search-bar__keyword-button--wide\").click();\ncy.get(\".tm-search-header-result-count__heading\").should(\"contain.text\", \"Showing 2,451 results\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h3.tm-search-header-result-count__heading.ng-star-inserted>' to contain text 'Showing 2,451 results', but the text was ' Showing 2,450 results\\n'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h3.tm-search-header-result-count__heading.ng-star-inserted>' to contain text 'Showing 2,451 results', but the text was ' Showing 2,450 results\\n'\n    at Context.eval (https://www.trademe.co.nz/__cypress/tests?p=cypress\\e2e\\TradeMe\\TradeMeTest.spec.js:14723:57)",
+                "diff": "- ' Showing 2,450 results\\n'\n+ 'Showing 2,451 results'\n"
+              },
+              "uuid": "0045c9ba-4033-4634-bb67-15f039cec8b5",
+              "parentUUID": "251ea8dc-9a40-4982-950a-9f307982f4f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I select the brand Ford and the showing results is 4,704",
+              "fullTitle": "As a user, I can see all car brands on the Make dropdown I select the brand Ford and the showing results is 4,704",
+              "timedOut": null,
+              "duration": 9241,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('select[name=\"selectedMake\"]').select(\"Ford\").should(\"have.value\", \"Ford\");\ncy.get(\".tm-motors-search-bar__keyword-button--wide\").click();\ncy.get(\".tm-search-header-result-count__heading\").should(\"contain.text\", \"Showing 4,704 results\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h3.tm-search-header-result-count__heading.ng-star-inserted>' to contain text 'Showing 4,704 results', but the text was ' Showing 4,698 results\\n'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h3.tm-search-header-result-count__heading.ng-star-inserted>' to contain text 'Showing 4,704 results', but the text was ' Showing 4,698 results\\n'\n    at Context.eval (https://www.trademe.co.nz/__cypress/tests?p=cypress\\e2e\\TradeMe\\TradeMeTest.spec.js:14728:57)",
+                "diff": "- ' Showing 4,698 results\\n'\n+ 'Showing 4,704 results'\n"
+              },
+              "uuid": "2bc2ff1d-2a2e-4abd-9074-1aba69a64aaa",
+              "parentUUID": "251ea8dc-9a40-4982-950a-9f307982f4f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I select the brand BMW and the showing results is 3,332",
+              "fullTitle": "As a user, I can see all car brands on the Make dropdown I select the brand BMW and the showing results is 3,332",
+              "timedOut": null,
+              "duration": 8721,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('select[name=\"selectedMake\"]').select(\"BMW\").should(\"have.value\", \"BMW\");\ncy.get(\".tm-motors-search-bar__keyword-button--wide\").click();\ncy.get(\".tm-search-header-result-count__heading\").should(\"contain.text\", \"Showing 3,332 results\");",
+              "err": {},
+              "uuid": "13d34440-eb8a-4336-958d-59798fe28b3a",
+              "parentUUID": "251ea8dc-9a40-4982-950a-9f307982f4f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I select the brand Ferrari and the showing results is 44",
+              "fullTitle": "As a user, I can see all car brands on the Make dropdown I select the brand Ferrari and the showing results is 44",
+              "timedOut": null,
+              "duration": 7525,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('select[name=\"selectedMake\"]').select(\"Ferrari\").should(\"have.value\", \"Ferrari\");\ncy.get(\".tm-motors-search-bar__keyword-button--wide\").click();\ncy.get(\".tm-search-header-result-count__heading\").should(\"contain.text\", \"Showing 44 results\");",
+              "err": {},
+              "uuid": "e2814356-4b41-4e53-a734-8e7255e66610",
+              "parentUUID": "251ea8dc-9a40-4982-950a-9f307982f4f1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d1487b49-e59a-4728-b698-7678ac0ce662",
+            "13d34440-eb8a-4336-958d-59798fe28b3a",
+            "e2814356-4b41-4e53-a734-8e7255e66610"
+          ],
+          "failures": [
+            "0045c9ba-4033-4634-bb67-15f039cec8b5",
+            "2bc2ff1d-2a2e-4abd-9074-1aba69a64aaa"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 43581,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

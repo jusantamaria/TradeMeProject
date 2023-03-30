@@ -1,0 +1,20 @@
+{
+  "name": "autohero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress open",
+    "cy:ex": "cypress run"
+  },
+  "author": "Julian Santamaria",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^16.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@cucumber/cucumber": "^9.1.0",
+    "cypress": "^12.9.0",
+    "esbuild": "^0.17.14",
+    "mochawesome": "^7.1.3"
+  }
+}
