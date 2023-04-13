@@ -6,6 +6,7 @@ const createEsbuildPlugin =
   require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
 
+
 module.exports = defineConfig({
   e2e: {
     async setupNodeEvents(on, config) {
@@ -19,9 +20,7 @@ module.exports = defineConfig({
       return config;
     },
 
-    specPattern: "cypress/e2e/",
-    //baseUrl: "https://the-internet.herokuapp.com",
+    specPattern: "cypress/e2e/TradeMe/*.feature",
     chromeWebSecurity: false,
   },
-  reporter: "mochawesome"
 });
