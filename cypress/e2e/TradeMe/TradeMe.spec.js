@@ -1,10 +1,10 @@
 context("TradeMe UI and API Tests", () =>{
 
     describe("As a user, I can see all car brands on the Make dropdown", () => {
-        Given("I navigate to the TradeMe Motor page", () => {
+        it("I navigate to the TradeMe Motor page", () => {
             cy.visit('https://www.trademe.co.nz/a/motors')
         })
-        Then("I can verify that the number of car brands are 77", () => {
+        it("I can verify that the number of car brands are 77", () => {
             cy.get('select[name="selectedMake"]')
             .find('option')
             .then(($value) => {
